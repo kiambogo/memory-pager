@@ -1,10 +1,10 @@
-# memory-pager
+# mempgr
 
 [![build status][1]][2]
 
-an implementation of memory paging in go lang
+an implementation of memory paging in go.
 
-adapted from https://github.com/datrs/memory-pager
+adapted from https://github.com/datrs/memory-pager.
 
 ## Installation
 
