@@ -1,4 +1,4 @@
-package mpager
+package mempgr
 
 const DEFAULT_PAGE_SIZE = 1024
 

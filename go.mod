@@ -1,4 +1,4 @@
-module github.com/kiambogo/mpager
+module github.com/kiambogo/mempgr
 
 go 1.16
 

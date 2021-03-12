@@ -1,4 +1,4 @@
-package mpager
+package mempgr
 
 import (
 	"testing"
