@@ -2,6 +2,7 @@ package mempgr
 
 const DEFAULT_PAGE_SIZE = 1024
 
+// Page is an indexed representation of a chunk of memory
 type Page struct {
 	offset int
 	buffer []byte
@@ -12,11 +13,15 @@ func (p Page) Offset() int {
 	return p.offset
 }
 
+// Pager is a tool used to reference chunks of memory (pages)
+// Allows retrieval, allocation, and setting memory contents by an index
 type Pager struct {
 	pageSize int
 	pages    []*Page
 }
 
+// NewPager constructs a new pager with the specified pageSize
+// Defaults the page size to 1024 bytes if passed a size of 0
 func NewPager(pageSize int) Pager {
 	if pageSize == 0 {
 		pageSize = DEFAULT_PAGE_SIZE
@@ -70,7 +75,8 @@ func (p Pager) IsEmpty() bool {
 	return len(p.pages) == 0
 }
 
-// Set will set the contents of ajj
+// Set will set the contents of the page at the specified index, with the provided data
+// Allocates a new page if it doesn't already exist
 func (p *Pager) Set(pageNum int, data []byte) {
 	page := p.GetOrAlloc(pageNum)
 	page.buffer = p.truncate(data)
