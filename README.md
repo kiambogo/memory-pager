@@ -6,6 +6,8 @@ an implementation of memory paging in go.
 
 adapted from https://github.com/datrs/memory-pager.
 
+archived as code has been moved over to https://github.com/kiambogo/go-hypercore.
+
 ## Installation
 
 ``` sh
