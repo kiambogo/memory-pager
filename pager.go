@@ -13,6 +13,11 @@ func (p Page) Offset() int {
 	return p.offset
 }
 
+// Buffer returns the internal buffer for the page
+func (p Page) Buffer() []byte {
+	return p.buffer
+}
+
 // Pager is a tool used to reference chunks of memory (pages)
 // Allows retrieval, allocation, and setting memory contents by an index
 type Pager struct {
